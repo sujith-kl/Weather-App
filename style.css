@@ -1,0 +1,448 @@
+/*
+ ______________________________________________
+|                                              |
+|     DEFAULT BODY AND OTHER CSS TAG           |
+|______________________________________________|
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkBlue-theme: #000918;
+  --lightBlue-shade: #e7effc;
+  --font-shade: #fff;
+  --btn-shadow: #bbbbbb;
+  --songFont-color: #6c7a94;
+  --btn-angleShadow: rgb(148, 148, 148);
+}
+
+body {
+  background: #4e66fc;
+  background: linear-gradient(to right, #4e66fc, #6dd5ed);
+  height: 100vh;
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--font-shade);
+}
+
+/*
+ ______________________________________________
+|                                              |
+|           UTILITIES CLASSES                  |
+|______________________________________________|
+*/
+
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 615px;
+  border-radius: 1.3rem;
+  -webkit-border-radius: 46px;
+  border-radius: 46px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--darkBlue-theme);
+}
+
+.upperDivShadow {
+  background: rgb(19, 75, 107);
+  margin: 0 auto;
+  z-index: 1;
+  height: 478px;
+  border-radius: 2.5rem;
+  border-bottom-left-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+  width: 258px;
+  margin: auto;
+  margin-top: 0.5rem;
+  opacity: 0.5;
+  transition: 0.3s ease-in;
+}
+
+.upperDiv {
+  height: 471px;
+  border-radius: 2.5rem;
+  width: 285px;
+  margin: auto;
+  margin-top: 0.5rem;
+  background: rgb(17, 169, 255);
+  background: linear-gradient(
+    127deg,
+    rgba(17, 169, 255, 1) 0%,
+    rgba(89, 192, 246, 1) 100%
+  );
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border: 2px solid cyan;
+  transition: 0.3s ease-in;
+}
+
+.arrowAndCityDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+.backArrow {
+  border: 2px solid cyan;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.7;
+  display: none;
+}
+
+.fa-chevron-left {
+  padding: 0.5rem;
+}
+
+.dots {
+  display: none;
+}
+
+.headingAndIcon,
+.sevenDaysheadingAndIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sevenDaysheadingAndIcon {
+  display: none;
+}
+
+.mapIcon,
+.calendarIcon {
+  margin: 0 0.3rem;
+}
+
+.city {
+  margin: 0 0.2rem;
+  font-weight: 600;
+}
+
+.skyImgDiv,
+.tempDesc,
+.tempDegree,
+.timeAndDate,
+.weatherDesc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  transition: 0.3s ease-in;
+}
+
+.skyImage {
+  height: 12rem;
+  width: 13rem;
+  transition: 0.3s ease-in;
+}
+
+.specialDiv {
+  transition: 0.3s ease-in;
+}
+
+.tempDesc {
+  margin-top: -2rem;
+  flex-direction: column;
+  transition: 0.3s ease-in;
+}
+
+.tempHeading {
+  font-size: 4rem;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.3s ease-in;
+}
+
+.wheatherHeading {
+  margin-top: -0.5rem;
+  transition: 0.3s ease-in;
+  text-transform: capitalize;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -1.5rem;
+  transition: 0.3s ease-in;
+}
+
+.celcius {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.timeAndDate {
+  margin-top: 0rem;
+}
+
+.weekDay,
+.day,
+.months {
+  font-size: 11px;
+  margin: 0rem 0.2rem;
+}
+
+.weatherDesc {
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.windIconDiv,
+.humidityIconDiv,
+.rainIconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.windValue,
+.humidity,
+.sunrise,
+.sunset {
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 0.2rem;
+}
+
+
+.windHeading,
+.humidityHeading,
+.sunriseHeading,
+.sunsetHeading {
+  font-weight: 200;
+  font-size: 10px;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.todaysTempDiv,
+.listTodaysTempDiv {
+  width: 245px;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.todayHeadingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.today {
+  opacity: 0.9;
+}
+
+.sevendays {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.todaysTempList,
+.todaysTimeTempDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.todaysTempList {
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.todaysTimeTempDiv {
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid rgba(85, 85, 131, 0.699);
+  border-radius: 20px;
+  padding: 0.5rem 0.7rem;
+  margin: 0px 5px;
+}
+
+.timeTemp,
+.particularTime {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.particularTime {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.particularTime {
+  margin-top: 0px;
+}
+
+.timeWheaterIcon{
+  margin: 0;
+  width: 22px;
+}
+
+.presentColor {
+  background: rgb(17, 169, 255);
+  background: linear-gradient(
+    127deg,
+    rgba(17, 169, 255, 1) 0%,
+    rgba(89, 192, 246, 1) 100%
+  );
+  border-radius: 2px solid cyan;
+}
+
+.presentColor .particularTime {
+  opacity: 0.9;
+}
+
+/* Changes on clicking 7 Days Temp */
+
+.upperDiv-curr {
+  height: 250px;
+  transition: 0.3s ease-in;
+}
+
+.upperDivShadow-curr {
+  height: 257px;
+  transition: 0.3s ease-in;
+}
+
+.tempDesc-curr {
+  margin-top: 0rem;
+  transition: 0.3s ease-in;
+}
+
+.skyImage-curr {
+  height: 5rem;
+  width: 6rem;
+  transition: 0.3s ease-in;
+}
+
+.skyImgDiv-curr,
+.tempDesc-curr,
+.tempDegree-curr {
+  margin-top: 0.5rem;
+  transition: 0.3s ease-in;
+}
+.timeAndDate-curr {
+  margin-top: 0;
+  transition: 0.3s ease-in;
+}
+
+.weatherDesc-curr {
+  margin-top: 1.5rem;
+  transition: 0.3s ease-in;
+}
+
+.tempHeading-curr {
+  font-size: 3rem;
+  transition: 0.3s ease-in;
+}
+
+.current {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  transition: 0.3s ease-in;
+}
+
+.wheatherHeading-curr {
+  font-size: 0.8rem;
+  transition: 0.3s ease-in;
+}
+
+.specialDiv-curr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+}
+
+
+/* Seven Days Temp Container */
+
+.sevenDaysContainer {
+  display: none;
+}
+
+.sevendays {
+  cursor: pointer;
+}
+
+.perDayDiv,
+.iconAndWeatherDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.perDayDiv {
+  margin: 1.5rem 0rem;
+}
+
+.wheaterIconList {
+  margin-right: 0.5rem;
+  width: 22px;
+}
+
+.weekDayList,
+.weatherDescList {
+  opacity: 0.6;
+}
+
+.weekDayList,
+.iconAndWeatherDesc,
+.tempList {
+  padding: 0rem 1.5rem;
+}
+
+.sevenDayList {
+  width: 285px;
+  margin: auto;
+}
+
+.currentClass {
+  background: rgb(17, 169, 255);
+  background: linear-gradient(
+    127deg,
+    rgba(17, 169, 255, 1) 0%,
+    rgba(89, 192, 246, 1) 100%
+  );
+  height: 1.5rem;
+  border-radius: 0.5rem;
+
+}
+
+.currentClass h5{
+ color: white;
+ opacity: 1;
+}
